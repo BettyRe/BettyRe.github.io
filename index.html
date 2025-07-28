@@ -1,14 +1,292 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>About me</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Licorice Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<!--    &lt;!&ndash; Deutsch &ndash;&gt;-->
+<!--    <div data-lang="de">-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; English &ndash;&gt;-->
+<!--    <div data-lang="en">-->
+<!--    </div>-->
 </head>
+
+
 <body>
 
-<h1>This is my portfolio</h1>
-<p>This is a paragraph.</p>
+<!-- HEADER -->
+<header>
+    <div id="logo">
+        <a href=""></a>
+        <img src="" alt="logo">
+    </div>
+    <div id="language_switch">
+        <button onclick="switchLanguage('de')">DE</button>
+        <button onclick="switchLanguage('en')">EN</button>
+    </div>
+
+    <nav id="main-nav">
+        <!-- Deutsch -->
+        <div data-lang="de">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Kontact</a></li>
+            </ul>
+        </div>
+
+        <!-- English -->
+        <div data-lang="en">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+<!-- MAIN PART -->
+
+<!-- LANDING PAGE -->
+<section id="home">
+    <!-- Deutsch -->
+    <div data-lang="de">
+        <img src="" alt="portrait">
+        <h1>Elisabeth Reckel</h1>
+        <h3>Studentin Medieninformatik B.Sc.</h3>
+        <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"</p>
+    </div>
+
+    <!-- English -->
+    <div data-lang="en">
+        <img src="" alt="portrait">
+        <h1>Elisabeth Reckel</h1>
+        <h3>Student of Media Informatics B.Sc.</h3>
+        <p>"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam"</p>
+    </div>
+    <hr>
+</section>
+
+<!-- ABOUT ME SECTION -->
+<section id="about">
+    <!-- Deutsch -->
+    <div data-lang="de">
+        <h3>Über mich</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+        <p></p>
+    </div>
+
+    <!-- English -->
+    <div data-lang="en">
+        <h3>About me</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        </p>
+    </div>
+
+    <hr>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section id="portfolio">
+
+    <!-- Deutsch -->
+    <div data-lang="de">
+        <h3>Portfolio</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+        <ul>
+            <li><a href="#"><img src="" alt="project_01"></a></li>
+            <li><a href="#"><img src="" alt="project_02"></a></li>
+            <li><a href="#"><img src="" alt="project_03"></a></li>
+            <li><a href="#"><img src="" alt="project_04"></a></li>
+            <li><a href="#"><img src="" alt="project_05"></a></li>
+            <li><a href="#"><img src="" alt="project_06"></a></li>
+            <li><a href="#"><img src="" alt="project_07"></a></li>
+            <li><a href="#"><img src="" alt="project_08"></a></li>
+        </ul>
+    </div>
+
+    <!-- English -->
+    <div data-lang="en">
+        <h3>Portfolio</h3>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
+        <ul>
+            <li><a href="#"><img src="" alt="project_01"></a></li>
+            <li><a href="#"><img src="" alt="project_02"></a></li>
+            <li><a href="#"><img src="" alt="project_03"></a></li>
+            <li><a href="#"><img src="" alt="project_04"></a></li>
+            <li><a href="#"><img src="" alt="project_05"></a></li>
+            <li><a href="#"><img src="" alt="project_06"></a></li>
+            <li><a href="#"><img src="" alt="project_07"></a></li>
+            <li><a href="#"><img src="" alt="project_08"></a></li>
+        </ul>
+    </div>
+
+
+    <hr>
+</section>
+
+<!-- SKILL SECTION -->
+<section id="skills">
+    <!-- Deutsch -->
+    <div data-lang="de">
+        <h3>Fähigkeiten</h3>
+
+        <h4>Entwicklerfähigkeiten</h4>
+        <ul>
+            HTML, CSS, JavaScript, PHP, Java, C#
+            Bootstrap, Unity3D
+            SQL-Grundkenntnisse und Datenmodellierung
+        </ul>
+
+        <h4>Programme & Werkzeuge</h4>
+        <ul>
+            DataGrip, IntelliJ, PHPStorm, Rider, WebStorm
+            Git & GitHub, Docker
+            Projekt- & Code-Strukturierung
+        </ul>
+
+        <h4>Design & Medienproduktion</h4>
+        <ul>
+            Ableton (Audio)
+            Affinity Designer, Photo, Publisher
+            DaVinci Resolve (Videoschnitt)
+            Usability & UX
+        </ul>
+
+        <h4>Persönliche Fähigkeiten</h4>
+        <ul>
+            Teamfähig und kommunikationsstark
+            Kreativ und ganzheitlich denkend
+            Analytisch und lösungsorientiert
+            Hohes Maß an Selbstorganisation und Eigenverantwortung
+            Nutzerzentrierte Denkweise und Qualitätsbewusstsein
+            Lernbereit und anpassungsfähig
+            Strukturiertes, zielorientiertes Arbeiten
+            Offen für Feedback und kontinuierliche Weiterentwicklung
+        </ul>
+    </div>
+
+    <!-- English -->
+    <div data-lang="en">
+        <h3>Skills</h3>
+
+        <h4>Development skills</h4>
+        <ul>
+            HTML, CSS, JavaScript, PHP, Java, C#
+            Bootstrap, Unity3D
+            Basic SQL knowledge and data modelling
+        </ul>
+
+        <h4>Software &  tools</h4>
+        <ul>
+            DataGrip, IntelliJ, PHPStorm, Rider, WebStorm
+            Git & GitHub, Docker
+            Project & code structuring
+        </ul>
+
+        <h4>Design & media production</h4>
+        <ul>
+            Ableton (audio)
+            Affinity Designer, Photo, Publisher
+            DaVinci Resolve (video editing)
+            Usability & UX
+        </ul>
+
+        <h4>Personal skills</h4>
+        <ul>
+            Team player and strong communicator
+            Creative and holistic thinker
+            Analytical and solution-oriented
+            Highly self-organised and responsible
+            User-centric mindset and quality awareness
+            Willing to learn and adapt
+            Structured and goal-oriented approach to work
+            Open to feedback and continuous development
+        </ul>
+
+    </div>
+
+    <hr>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+    <!-- Deutsch -->
+    <div data-lang="de">
+        <h3>Kontakt</h3>
+        <form action="">
+            <input type="email" tabindex="1" placeholder="Mail"><br>
+            <input type="betreff" tabindex="2" placeholder="Betreff"><br>
+            <textarea name="" id="test" cols="30" rows="10" tabindex="3" placeholder="Text"></textarea><br>
+            <input class="button" type="submit">
+        </form>
+    </div>
+
+    <!-- English -->
+    <div data-lang="en">
+        <h3>Contact</h3>
+        <form action="">
+            <input type="email" tabindex="1" placeholder="Mail"><br>
+            <input type="betreff" tabindex="2" placeholder="Subject"><br>
+            <textarea name="" id="" cols="30" rows="10" tabindex="3" placeholder="Text"></textarea><br>
+            <input class="button" type="submit">
+        </form>
+    </div>
+
+
+    <hr>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+    <!-- Deutsch -->
+    <div data-lang="de">
+    </div>
+
+    <!-- English -->
+    <div data-lang="en">
+    </div>
+
+    <p>&copy; 2023 Elisabeth Reckel</p>
+</footer>
+
+
+
+
 
 </body>
+
 </html>
