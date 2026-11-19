@@ -418,51 +418,141 @@ section > [data-lang] {
     outline-offset: 4px;
 }
 
-/* ABOUT */
-#about p {
-    max-width: 70ch;
-}
+/* SECTION TYPOGRAPHY */
 
-/* PORTFOLIO */
-#portfolio ul {
-    list-style: none;
-    padding: 0;
-    margin: var(--space-xl) 0 0 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-}
-
-#portfolio li {
-    min-height: 180px;
-    border-radius: 16px;
-    border: 1px solid var(--color-line);
-    background:
-            linear-gradient(180deg, rgba(255,255,255,0.45), rgba(239,231,215,0.85));
-    box-shadow: 0 6px 18px rgba(47, 58, 45, 0.06);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    overflow: hidden;
-}
-
-#portfolio li:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 26px rgba(47, 58, 45, 0.10);
-}
-
-#portfolio li a {
-    display: flex;
-    align-items: end;
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-    color: var(--color-text);
+.section-label {
+    font-size: 0.78rem;
     font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #826B4E;
+    margin-bottom: var(--space-lg);
 }
 
-#portfolio li a::before {
-    content: "Project preview";
+.section-label::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 1px;
+    background: var(--color-highlight);
+    margin-top: var(--space-sm);
+}
+
+.section-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-xl);
+}
+
+.section-heading span {
+    display: block;
+    font-style: italic;
+    color: var(--color-accent-hover);
+}
+
+.signature {
+    font-family: var(--font-script);
+    font-size: 3rem;
+    color: var(--color-accent-hover);
+    line-height: 1.2;
+}
+
+/* IMAGE CAPTIONS */
+
+.image-caption {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-style: italic;
     color: var(--color-text-soft);
-    font-size: 0.95rem;
+}
+
+.image-credit {
+    display: block;
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text-soft);
+    margin-top: 0.25rem;
+}
+
+/* ABOUT */
+
+#about > [data-lang] {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+}
+
+.about-visual {
+    margin: 0;
+    width: 100%;
+    max-width: 460px;
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 2.5;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 6px;
+    box-shadow: var(--shadow-soft);
+    filter: saturate(0.85);
+}
+
+.about-visual figcaption {
+    text-align: center;
+    margin-top: var(--space-md);
+}
+
+.about-copy {
+    min-width: 0;
+}
+
+.about-copy > p:not(.section-label) {
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+}
+
+.about-signoff {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-xl);
+    gap: var(--space-lg);
+}
+
+/* BOTANICAL ILLUSTRATION PLACEHOLDER */
+
+.botanical-placeholder {
+    width: 90px;
+    height: 110px;
+    flex-shrink: 0;
+    border: 1px dashed var(--color-line);
+    border-radius: 6px;
+    display: grid;
+    place-items: center;
+}
+
+.botanical-placeholder::after {
+    content: "SVG";
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--color-text-soft);
 }
 
 /* SKILLS */
@@ -626,5 +716,28 @@ footer p {
     section {
         scroll-margin-top: 1rem;
         padding: var(--space-3xl) var(--page-gutter);
+    }
+}
+
+/* RESPONSIVE ABOUT */
+
+@media (max-width: 900px) {
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .about-copy {
+        grid-row: 1;
+    }
+
+    .about-visual {
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .about-image {
+        aspect-ratio: 3 / 4;
     }
 }
