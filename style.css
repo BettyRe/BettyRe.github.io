@@ -555,6 +555,108 @@ section > [data-lang] {
     color: var(--color-text-soft);
 }
 
+
+/* PORTFOLIO */
+
+#portfolio > [data-lang] {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+.portfolio-intro {
+    max-width: 55ch;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-2xl);
+}
+
+/* PROJECT GRID */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 4vw, 4rem);
+}
+
+.project-card {
+    min-width: 0;
+}
+
+/* PROJECT PREVIEW */
+
+.project-preview {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: var(--space-lg);
+    background: var(--color-bg-soft);
+}
+
+.project-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* GreenCart screenshot */
+
+.project-preview--greencart {
+    padding: 0;
+    background: #e9eee5;
+}
+
+.project-preview--greencart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* PROJECT TEXT */
+
+.project-category {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #826b4e;
+    margin-bottom: var(--space-sm);
+}
+
+.project-card h3 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+}
+
+.project-description {
+    max-width: 52ch;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+}
+
+.project-tech {
+    font-size: 0.85rem;
+    color: var(--color-accent-hover);
+    font-weight: 500;
+}
+
+/* RESPONSIVE PORTFOLIO */
+
+@media (max-width: 720px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+}
+
+
 /* SKILLS */
 #skills h4 {
     margin-top: var(--space-xl);
