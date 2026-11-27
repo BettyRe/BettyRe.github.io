@@ -43,13 +43,17 @@
 <main id="content">
   <section class="p-introduction p-section">
     <div class="p-container">
+
+      <!-- Deutsch -->
       <div data-lang="de" lang="de" class="p-heading-block">
         <a class="p-back" href="../index.html#portfolio">← Zurück zu den Projekten</a>
         <p class="p-kicker">STUDIENPROJEKT · 2025 · 3D ENVIRONMENT</p>
-        <h1 id="project-title">Virtual Fantasy <em>World.</em></h1>
+        <h1 id="project-title">Virtuelle Fantasy <em>Welt.</em></h1>
         <p class="p-subtitle">Ein Ort, der zum Entdecken einlädt.</p>
         <p class="p-lead">Aus einer Architekturidee entstand eine begehbare Fantasy-Welt, in der Atmosphäre, Landschaft und kleine Interaktionen zu einem zusammenhängenden Erlebnis werden.</p>
       </div>
+
+      <!-- English -->
       <div data-lang="en" lang="en" class="p-heading-block">
         <a class="p-back" href="../index.html#portfolio">← Back to projects</a>
         <p class="p-kicker">UNIVERSITY PROJECT · 2025 · 3D ENVIRONMENT</p>
@@ -71,15 +75,20 @@
     </div>
   </section>
 
+  <!-- SECTION 01: THE VISION -->
   <section class="p-section" id="vision" aria-label="Concept and vision">
     <div class="p-container p-split">
       <div>
+
+        <!-- Deutsch -->
         <div data-lang="de" lang="de">
           <p class="p-kicker">01 / DIE IDEE</p>
           <h2>Von der Skizze <em>zur Vision.</em></h2>
           <p>Die Studienaufgabe lautete „Bauen Sie Ihr Traumhaus“. Meine Antwort darauf war eine naturverbundene, vom Hobbiton Movie Set inspirierte Architektur: ein Haus im Hügel, mit runder Tür, Holzrahmen, Naturstein und einem Garten, der zum Erkunden einlädt.</p>
           <p>Am Anfang standen ein Exposé, eigene Referenzfotografien und eine handgezeichnete Skizze. Die Gestaltung sollte Ruhe und Geborgenheit vermitteln, nicht nur eine Gebäudefassade zeigen.</p>
         </div>
+
+        <!-- English -->
         <div data-lang="en" lang="en">
           <p class="p-kicker">01 / THE VISION</p>
           <h2>From sketch <em>to vision.</em></h2>
@@ -95,15 +104,20 @@
     </div>
   </section>
 
+  <!-- SECTION 02: BUILDING THE WORLD -->
   <section class="p-section p-toned" id="process" aria-label="Modeling and implementation">
     <div class="p-container">
       <div class="p-narrow">
+
+        <!-- Deutsch -->
         <div data-lang="de" lang="de">
           <p class="p-kicker">02 / DIE UMSETZUNG</p>
           <h2>Architektur <em>integriert in Landschaft.</em></h2>
           <p>Die Architekturteile, darunter Wände, Türen, Fenster und Schornsteine, habe ich in Blender modelliert. Eine technische Herausforderung war die Gestaltung der in den Hügel eingelassenen Gebäude: Das Standard-Terrain von Unity eignete sich nicht für die benötigten Höhlenformen und Überhänge.</p>
           <p>Deshalb habe ich ein eigenes Hügel-Mesh in Blender erstellt, in das sich die Bauteile einfügen ließen, und die Geometrie anschließend als FBX nach Unity übertragen. Die weitere Umgebung wurde mit ergänzenden Drittanbieter-Assets, Materialien und Effekten gestaltet.</p>
         </div>
+
+        <!-- English -->
         <div data-lang="en" lang="en">
           <p class="p-kicker">02 / BUILDING THE WORLD</p>
           <h2>Architecture <em>within the landscape.</em></h2>
@@ -118,39 +132,158 @@
     </div>
   </section>
 
+  <!-- SECTION 03: A WORLD THAT RESPONDS -->
   <section class="p-section" id="interactions" aria-label="Interaction and atmosphere">
     <div class="p-container">
+
+      <!-- Deutsch -->
       <div data-lang="de" lang="de" class="p-narrow">
         <p class="p-kicker">03 / INTERAKTION & ATMOSPHÄRE</p>
         <h2>Eine Welt, <em>die reagiert.</em></h2>
         <p>Die Umgebung ist als First-Person-Erlebnis angelegt. Dabei sollten Funktionen möglichst selbstverständlich Teil der Spielwelt sein und nicht nur über Menüs funktionieren.</p>
+        <div class="atmosphere-lead-image">
+          <img
+                  src="../img/unity-project/sunset.webp"
+                  alt="Sonnenuntergang über einer Graslandschaft in der virtuellen Welt"
+                  loading="lazy"
+                  decoding="async"
+          >
+        </div>
+        <div class="interaction-grid">
+
+          <!-- Entdecken und interagieren -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/door_opening_closing.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">01</p>
+              <h3>Entdecken und interagieren</h3>
+              <p>Die Tür öffnet und schließt bei Annäherung. Das Lagerfeuer unter einem Kessel lässt sich per Mausklick an- und ausschalten.</p>
+            </div>
+          </article>
+
+          <!-- Licht und Tageszeiten -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/lights_at_night.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">02</p>
+              <h3>Licht und Tageszeiten</h3>
+              <p>Ein automatischer Tag-Nacht-Zyklus verändert Himmel und Licht. Nachts reagieren die Lampen auf die Entfernung der Spielfigur.</p>
+            </div>
+          </article>
+
+          <!-- Lebendige Umgebung -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/smoking_chimneys.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">03</p>
+              <h3>Lebendige Umgebung</h3>
+              <p>Schmetterlinge, Windmühlenflügel, Schornsteinrauch und sich im Wind bewegende Vegetation lassen die Landschaft lebendiger wirken.</p>
+            </div>
+          </article>
+
+          <!-- Räumlicher Klang & Orientierung -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/game_exit.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">04</p>
+              <h3>Räumlicher Klang & Orientierung</h3>
+              <p>Wassergeräusche werden bei Annäherung lauter, Musik wechselt mit der Tageszeit. Ein Wegweiser führt innerhalb der Welt zum Spielausgang.</p>
+            </div>
+          </article>
+
+        </div>
       </div>
+
+      <!-- English -->
       <div data-lang="en" lang="en" class="p-narrow">
         <p class="p-kicker">03 / INTERACTION & ATMOSPHERE</p>
         <h2>A world <em>that responds.</em></h2>
         <p>The environment is designed for first-person exploration. Interactions are integrated into the setting itself, rather than relying solely on on-screen menus.</p>
-      </div>
-      <div class="p-feature-grid">
-        <article class="p-feature">
-          <span class="p-feature-number">01</span>
-          <div data-lang="de" lang="de"><h3>Entdecken und interagieren</h3><p>Die Tür öffnet und schließt bei Annäherung. Das Lagerfeuer unter einem Kessel lässt sich per Mausklick an- und ausschalten.</p></div>
-          <div data-lang="en" lang="en"><h3>Explore and interact</h3><p>The front door opens and closes when approached. A campfire beneath a cauldron can be toggled with a mouse click.</p></div>
-        </article>
-        <article class="p-feature">
-          <span class="p-feature-number">02</span>
-          <div data-lang="de" lang="de"><h3>Licht und Tageszeiten</h3><p>Ein automatischer Tag-Nacht-Zyklus verändert Himmel und Licht. Nachts reagieren die Lampen auf die Entfernung der Spielfigur.</p></div>
-          <div data-lang="en" lang="en"><h3>Light and time</h3><p>An automatic day–night cycle changes the sky and lighting. At night, lamps respond to the player's proximity.</p></div>
-        </article>
-        <article class="p-feature">
-          <span class="p-feature-number">03</span>
-          <div data-lang="de" lang="de"><h3>Lebendige Umgebung</h3><p>Schmetterlinge, Windmühlenflügel, Schornsteinrauch und sich im Wind bewegende Vegetation lassen die Landschaft lebendiger wirken.</p></div>
-          <div data-lang="en" lang="en"><h3>A living environment</h3><p>Butterflies, a rotating windmill, chimney smoke and wind-animated vegetation make the landscape feel alive.</p></div>
-        </article>
-        <article class="p-feature">
-          <span class="p-feature-number">04</span>
-          <div data-lang="de" lang="de"><h3>Räumlicher Klang & Orientierung</h3><p>Wassergeräusche werden bei Annäherung lauter, Musik wechselt mit der Tageszeit. Ein Wegweiser führt innerhalb der Welt zum Spielausgang.</p></div>
-          <div data-lang="en" lang="en"><h3>Spatial sound & wayfinding</h3><p>Water ambience grows louder as the player approaches; music changes with the time of day. An in-world sign leads towards the exit.</p></div>
-        </article>
+        <div class="atmosphere-lead-image">
+          <img
+                  src="../img/unity-project/sunset.webp"
+                  alt="Sunset over a meadow in the virtual world"
+                  loading="lazy"
+                  decoding="async"
+          >
+        </div>
+
+        <div class="interaction-grid">
+
+          <!-- Explore and interact -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/door_opening_closing.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">01</p>
+              <h3>Explore and interact</h3>
+              <p>The front door opens and closes when approached. A campfire beneath a cauldron can be toggled with a mouse click.</p>
+            </div>
+          </article>
+
+          <!-- Light and time -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/lights_at_night.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">02</p>
+              <h3>Light and time</h3>
+              <p>An automatic day–night cycle changes the sky and lighting. At night, lamps respond to the player's proximity.</p>
+            </div>
+          </article>
+
+          <!-- A living environment -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/smoking_chimneys.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">03</p>
+              <div data-lang="en" lang="en">
+                <h3>A living environment</h3>
+                <p>Butterflies, a rotating windmill, chimney smoke and wind-animated vegetation make the landscape feel alive.</p>
+            </div>
+          </article>
+
+          <!-- Spatial sound & wayfinding -->
+          <article class="interaction-card">
+            <div class="interaction-media">
+              <video autoplay muted loop playsinline>
+                <source src="../img/unity-project/game_exit.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="interaction-copy">
+              <p class="interaction-number">04</p>
+              <h3>Spatial sound & wayfinding</h3>
+              <p>Water ambience grows louder as the player approaches; music changes with the time of day. An in-world sign leads towards the exit.</p>
+            </div>
+          </article>
+
+        </div>
       </div>
     </div>
   </section>
