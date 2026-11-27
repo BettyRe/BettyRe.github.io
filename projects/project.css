@@ -256,6 +256,12 @@ body.case-study,body.credits-page {
     padding-left: .2rem;
 }
 
+.p-download-meta {
+    font-size: 0.85rem;
+    color: var(--color-text-soft);
+    margin-top: var(--space-sm);
+}
+
 .p-footer {
     padding: 2rem var(--page-gutter) 3rem;
     background: var(--color-bg);
