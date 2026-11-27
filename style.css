@@ -26,6 +26,13 @@
     --space-xl: 2rem;
     --space-2xl: 3rem;
     --space-3xl: 5rem;
+
+    /* Typography scale */
+
+    --font-size-hero: clamp(3.8rem, 8vw, 7rem);
+    --font-size-tagline: clamp(1.7rem, 3vw, 2.5rem);
+    --font-size-section: clamp(2.4rem, 4vw, 3.8rem);
+    --font-size-body: 1.05rem;
 }
 
 *,
@@ -330,7 +337,7 @@ section > [data-lang] {
 }
 
 #home h1 {
-    font-size: clamp(3.8rem, 8vw, 7rem);
+    font-size: var(--font-size-hero);
     font-weight: 500;
     letter-spacing: -0.03em;
     line-height: 0.95;
@@ -339,7 +346,7 @@ section > [data-lang] {
 
 .hero-tagline {
     font-family: var(--font-heading);
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-size: var(--font-size-tagline);
     font-style: italic;
     color: #7f735d;
     line-height: 1.25;
@@ -440,7 +447,7 @@ section > [data-lang] {
 
 .section-heading {
     font-family: var(--font-heading);
-    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-size: var(--font-size-section);
     font-weight: 500;
     line-height: 1.15;
     letter-spacing: -0.02em;
