@@ -32,7 +32,19 @@
     --font-size-hero: clamp(3.8rem, 8vw, 7rem);
     --font-size-tagline: clamp(1.7rem, 3vw, 2.5rem);
     --font-size-section: clamp(2.4rem, 4vw, 3.8rem);
-    --font-size-body: 1.05rem;
+    --font-size-h1: clamp(3rem, 6vw, 5.5rem);
+    --font-size-h3: clamp(1.7rem, 2.5vw, 2.6rem);
+    --font-size-h4: 1.35rem;
+    --font-size-body: 1rem;
+    --font-size-lead: 1.1rem;
+    --font-size-label: 0.78rem;
+    --font-size-small: 0.85rem;
+    --line-height-body: 1.8;
+    --line-height-lead: 1.9;
+    --line-height-title: 0.95;
+    --line-height-heading: 1.15;
+    --color-subtitle: #7f735d;
+    --color-label: #826b4e;
 }
 
 *,
@@ -53,7 +65,8 @@ body {
             radial-gradient(circle at top left, rgba(176, 146, 109, 0.12), transparent 28%),
             radial-gradient(circle at top right, rgba(111, 125, 88, 0.10), transparent 22%),
             var(--color-bg);
-    line-height: 1.65;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
 }
 
 /* Hide empty placeholder images for now */
@@ -80,24 +93,27 @@ h4 {
     margin-bottom: var(--space-md);
     font-family: var(--font-heading);
     color: var(--color-text);
-    line-height: 1.1;
-    font-weight: 600;
+    line-height: var(--line-height-heading);
+    font-weight: 500;
 }
 
 h1 {
-    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-title);
+    letter-spacing: -0.03em;
 }
 
 h2 {
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-size: var(--font-size-section);
+    letter-spacing: -0.02em;
 }
 
 h3 {
-    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    font-size: var(--font-size-h3);
 }
 
 h4 {
-    font-size: 1.35rem;
+    font-size: var(--font-size-h4);
 }
 
 ul {
@@ -259,44 +275,6 @@ section > [data-lang] {
     padding: clamp(1.25rem, 3vw, 2.5rem);
     box-shadow: var(--shadow-soft);
 }
-/* BUTTONS */
-
-.btn-primary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-text);
-    color: var(--color-surface);
-    padding: 0.9rem 1.6rem;
-    border: 1px solid var(--color-text);
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.btn-primary:hover {
-    background: var(--color-accent-hover);
-    border-color: var(--color-accent-hover);
-}
-
-.btn-text {
-    color: var(--color-text);
-    font-weight: 500;
-    text-decoration: underline;
-    text-underline-offset: 0.3em;
-}
-
-.btn-text:hover {
-    color: var(--color-accent-hover);
-}
-
-.btn-primary:focus-visible,
-.btn-text:focus-visible {
-    outline: 2px solid var(--color-text);
-    outline-offset: 4px;
-}
-
 /* HOME */
 #home {
     padding-block: clamp(2rem, 6vw, 5rem);
@@ -328,7 +306,7 @@ section > [data-lang] {
 }
 
 .eyebrow {
-    font-size: 0.78rem;
+    font-size: var(--font-size-label);
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -344,20 +322,25 @@ section > [data-lang] {
     margin-bottom: var(--space-md);
 }
 
-.hero-tagline {
+.hero-tagline,
+.p-subtitle {
     font-family: var(--font-heading);
     font-size: var(--font-size-tagline);
     font-style: italic;
-    color: #7f735d;
+    color: var(--color-subtitle);
     line-height: 1.25;
     margin-bottom: var(--space-lg);
 }
 
+.hero-description,
+.p-lead {
+    font-size: var(--font-size-lead);
+    line-height: var(--line-height-lead);
+    margin-bottom: var(--space-xl);
+}
+
 .hero-description {
     max-width: 32rem;
-    font-size: 1.1rem;
-    line-height: 1.9;
-    margin-bottom: var(--space-xl);
 }
 
 .hero-actions {
@@ -427,16 +410,18 @@ section > [data-lang] {
 
 /* SECTION TYPOGRAPHY */
 
-.section-label {
-    font-size: 0.78rem;
+.section-label,
+.p-kicker {
+    font-size: var(--font-size-label);
     font-weight: 500;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #826B4E;
+    color: var(--color-label);
     margin-bottom: var(--space-lg);
 }
 
-.section-label::after {
+.section-label::after,
+.p-kicker::after {
     content: "";
     display: block;
     width: 42px;
@@ -454,8 +439,11 @@ section > [data-lang] {
     margin-bottom: var(--space-xl);
 }
 
-.section-heading span {
-    display: block;
+.section-heading span,
+.section-heading em,
+.case-study h2 span,
+.case-study h2 em {
+    display: inline;
     font-style: italic;
     color: var(--color-accent-hover);
 }
@@ -530,8 +518,8 @@ section > [data-lang] {
 
 .about-copy > p:not(.section-label) {
     max-width: 65ch;
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
     margin-bottom: var(--space-lg);
 }
 
@@ -575,8 +563,8 @@ section > [data-lang] {
 
 .portfolio-intro {
     max-width: 55ch;
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
     margin-bottom: var(--space-2xl);
 }
 
@@ -632,19 +620,19 @@ section > [data-lang] {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: #826b4e;
+    color: var(--color-label);
     margin-bottom: var(--space-sm);
 }
 
 .project-card h3 {
-    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-size: var(--font-size-h3);
     font-weight: 500;
     margin-bottom: var(--space-md);
 }
 
 .project-description {
     max-width: 52ch;
-    line-height: 1.8;
+    line-height: var(--line-height-body);
     margin-bottom: var(--space-md);
 }
 
@@ -772,17 +760,14 @@ footer p {
         padding: 1.25rem;
     }
 
-    #home h1 {
-        font-size: clamp(3rem, 16vw, 4.5rem);
-    }
-
-    .hero-tagline {
-        font-size: 1.5rem;
-    }
-
-    .hero-description {
-        font-size: 1rem;
-        line-height: 1.8;
+    :root {
+        --font-size-hero: clamp(3rem, 16vw, 4.5rem);
+        --font-size-h1: clamp(2.6rem, 9vw, 4rem);
+        --font-size-section: clamp(2rem, 6vw, 2.8rem);
+        --font-size-h3: clamp(1.6rem, 5vw, 2rem);
+        --font-size-tagline: 1.5rem;
+        --font-size-lead: 1rem;
+        --line-height-lead: var(--line-height-body);
     }
 }
 
@@ -859,4 +844,8 @@ footer p {
     .about-image {
         aspect-ratio: 3 / 4;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
 }
